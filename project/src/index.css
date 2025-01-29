@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Parallax scroll effect */
+.parallax {
+  @apply transition-transform duration-300;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Hover effects */
+.hover-card {
+  @apply transition-all duration-300;
+}
+
+.hover-card:hover {
+  @apply transform -translate-y-1 shadow-xl;
+}
